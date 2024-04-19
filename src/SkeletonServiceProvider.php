@@ -2,9 +2,9 @@
 
 namespace Luminarix\Skeleton;
 
+use Luminarix\Skeleton\Commands\SkeletonCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Luminarix\Skeleton\Commands\SkeletonCommand;
 
 class SkeletonServiceProvider extends PackageServiceProvider
 {

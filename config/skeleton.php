@@ -2,5 +2,4 @@
 
 // config for Luminarix/Skeleton
 return [
-
 ];

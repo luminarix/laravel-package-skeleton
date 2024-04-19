@@ -109,8 +109,8 @@ $variableName = lcfirst($className);
 $description = ask('Package description', "This is my package {$packageSlug}");
 
 writeln('------');
-writeln("Author     : Luminarix Labs (luminarix, hello@luminarix.dev)");
-writeln("Vendor     : Luminarix Labs (luminarix)");
+writeln('Author     : Luminarix Labs (luminarix, hello@luminarix.dev)');
+writeln('Vendor     : Luminarix Labs (luminarix)');
 writeln("Package    : {$packageSlug} <{$description}>");
 writeln("Namespace  : Luminarix\\{$className}");
 writeln("Class name : {$className}");
