@@ -20,7 +20,7 @@ function confirm(string $question, bool $default = false): bool
         return $default;
     }
 
-    return strtolower($answer) === 'y';
+    return mb_strtolower($answer) === 'y';
 }
 
 function writeln(string $line): void
@@ -35,7 +35,7 @@ function run(string $command): string
 
 function slugify(string $subject): string
 {
-    return strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $subject), '-'));
+    return mb_strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $subject), '-'));
 }
 
 function title_case(string $subject): string
@@ -65,7 +65,7 @@ function replace_in_file(string $file, array $replacements): void
 function remove_prefix(string $prefix, string $content): string
 {
     if (str_starts_with($content, $prefix)) {
-        return substr($content, strlen($prefix));
+        return mb_substr($content, mb_strlen($prefix));
     }
 
     return $content;
@@ -128,7 +128,7 @@ if (!confirm('Modify files?', true)) {
     exit(1);
 }
 
-$files = (str_starts_with(strtoupper(PHP_OS), 'WIN') ? replaceForWindows() : replaceForAllOtherOSes());
+$files = (str_starts_with(mb_strtoupper(PHP_OS), 'WIN') ? replaceForWindows() : replaceForAllOtherOSes());
 
 foreach ($files as $file) {
     replace_in_file($file, [
