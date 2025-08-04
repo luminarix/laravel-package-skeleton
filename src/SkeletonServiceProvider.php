@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Luminarix\Skeleton;
 
 use Luminarix\Skeleton\Commands\SkeletonCommand;

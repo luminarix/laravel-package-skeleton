@@ -1,5 +1,6 @@
 <?php
 
-// config for Luminarix/Skeleton
+declare(strict_types=1);
+
 return [
 ];
