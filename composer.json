@@ -44,10 +44,10 @@
         }
     },
     "scripts": {
-        "analyse": "vendor/bin/phpstan analyse",
+        "analyse": "vendor/bin/phpstan analyse --memory-limit=4G -v",
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "format": "XDEBUG_MODE=off vendor/bin/pint --parallel"
     },
     "config": {
         "sort-packages": true,
